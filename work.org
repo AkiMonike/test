@@ -112,9 +112,6 @@
    - [X] 文元添加配置表
 ** DONE 生产问题亚太 [100%] 
    - [X] P_R_ERMS_TLISTING_FOREX_SWA_AP 主键冲突
-     
-
-X_{Y}
 [[/home/aki/Share/yahe.png]]
 * 工作内容 [0/2] <2017-06-26 一>
 ** TODO 张震债券需求 [66%]
