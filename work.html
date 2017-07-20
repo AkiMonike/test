@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-07-20 四 18:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="aki" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0d81ded">1. 工作内容 <code>[13/14]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-07 三&gt;</span></span></a>
+<ul>
+<li><a href="#org85a01f6">1.1. <span class="done DONE">DONE</span> 工单编号：QA-CSD.CSP-17-06-0145</a></li>
+<li><a href="#org0717672">1.2. <span class="done DONE">DONE</span> 请完成P704批次投产方案制订的准备工作</a></li>
+<li><a href="#orgdf7a709">1.3. <span class="done DONE">DONE</span> 外汇敞口基础表所需求字段表样-郭长青</a></li>
+<li><a href="#orga0a6085">1.4. <span class="done DONE">DONE</span> 下传RM头寸问题-李艳波 <code>[100%]</code></a></li>
+<li><a href="#org1997cb0">1.5. <span class="done DONE">DONE</span> 张文通P703由D+1日调到D日打版本，分析一下对IMA的影响</a></li>
+<li><a href="#orgb887bfb">1.6. <span class="done DONE">DONE</span> 张震债券交易事件 <code>[100%]</code></a></li>
+<li><a href="#orgf7af748">1.7. <span class="todo TODO">TODO</span> 志强对账总账与流水剩余核算码 <code>[5/7]</code></a>
+<ul>
+<li><a href="#org69cb7ce">1.7.1. <span class="done DONE">DONE</span> 7344 <code>[100%]</code></a></li>
+<li><a href="#orgd351d36">1.7.2. <span class="done DONE">DONE</span> 7444 <code>[100%]</code></a></li>
+<li><a href="#org6ced662">1.7.3. <span class="todo TODO">TODO</span> 7477 <code>[100%]</code></a></li>
+<li><a href="#orgfda75bb">1.7.4. <span class="done DONE">DONE</span> 8344 <code>[100%]</code></a></li>
+<li><a href="#orgf84f383">1.7.5. <span class="done DONE">DONE</span> 8468 <code>[50%]</code></a></li>
+<li><a href="#orgb794d97">1.7.6. <span class="todo TODO">TODO</span> 8477 <code>[100%]</code></a></li>
+<li><a href="#org4f38b24">1.7.7. <span class="done DONE">DONE</span> 8576 <code>[100%]</code></a></li>
+</ul>
+</li>
+<li><a href="#org7cda3f1">1.8. <span class="done DONE">DONE</span> 对帐相关问题及对帐自动化架构</a></li>
+<li><a href="#org4076c37">1.9. <span class="done DONE">DONE</span> 积利金项目升级需求[FR-201704-18385]</a></li>
+<li><a href="#org7d573ce">1.10. <span class="done DONE">DONE</span> 影像内容管理系统基础版本升级及操作系统迁移项目[FR-201706-18963]</a></li>
+<li><a href="#orgbff3e8a">1.11. <span class="done DONE">DONE</span> 关于新加坡分行业务人员来北京介绍“期货业务综合需求”的通知</a></li>
+<li><a href="#orga0d6ad9">1.12. <span class="done DONE">DONE</span> Quanto需求暂定排期X79</a></li>
+<li><a href="#org3681e4b">1.13. <span class="done DONE">DONE</span> 债券历史交易清理</a></li>
+<li><a href="#org413a510">1.14. <span class="done DONE">DONE</span> 生产索引表空间満了</a></li>
+</ul>
+</li>
+<li><a href="#orgd61d946">2. 工作内容 <code>[3/3]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-08 四&gt;</span></span></a>
+<ul>
+<li><a href="#org3bcff7b">2.1. <span class="done DONE">DONE</span> 外包差异化管控－重点外包产品管控前移</a></li>
+<li><a href="#orgbf45bef">2.2. <span class="done DONE">DONE</span> 查看生产上以前日期INI的JOBCTL原因</a></li>
+<li><a href="#orgabf38c8">2.3. <span class="done DONE">DONE</span> 查看生产报表服务器配置情况 <code>[100%]</code></a></li>
+</ul>
+</li>
+<li><a href="#orge24d76b">3. 工作内容 <code>[3/3]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-09 五&gt;</span></span></a>
+<ul>
+<li><a href="#org4ac69d1">3.1. <span class="done DONE">DONE</span> 生产问题单TEMP不足SQL优化方案 <code>[100%]</code></a></li>
+<li><a href="#org03fac0f">3.2. <span class="done DONE">DONE</span> 外包差异化管理-会议</a></li>
+<li><a href="#org2c95c72">3.3. <span class="done DONE">DONE</span> 新加坡业务需求CB3-周贤举 <code>[100%]</code></a></li>
+</ul>
+</li>
+<li><a href="#org57eaa66">4. 工作内容 <code>[1/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-13 二&gt;</span></span></a>
+<ul>
+<li><a href="#org92f708d">4.1. <span class="done DONE">DONE</span> 生产环境数据清理 <code>[100%]</code></a></li>
+</ul>
+</li>
+<li><a href="#orgb4b6eb4">5. 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-15 四&gt;</span></span></a>
+<ul>
+<li><a href="#org277737d">5.1. <span class="done DONE">DONE</span> 澳门分行添加用户 <code>[100%]</code></a></li>
+<li><a href="#orge78ee79">5.2. <span class="done DONE">DONE</span> 生产问题亚太 <code>[100%]</code></a></li>
+</ul>
+</li>
+<li><a href="#org0f53394">6. 工作内容 <code>[0/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-26 一&gt;</span></span></a>
+<ul>
+<li><a href="#org088c489">6.1. <span class="todo TODO">TODO</span> 张震债券需求 <code>[66%]</code></a></li>
+<li><a href="#org270d05f">6.2. <span class="todo TODO">TODO</span> T01_DL_INFO初始化逻辑</a></li>
+</ul>
+</li>
+<li><a href="#org3d3f802">7. 工作内容 <code>[1/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-27 二&gt;</span></span></a>
+<ul>
+<li><a href="#org4cee15f">7.1. <span class="done DONE">DONE</span> 生产后台乱码问题 <code>[100%]</code></a></li>
+</ul>
+</li>
+<li><a href="#orga8b045d">8. 工作内容 <code>[0/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-04 二&gt;</span></span></a>
+<ul>
+<li><a href="#org2d389ec">8.1. <span class="todo TODO">TODO</span> ETL架构说明及开发规范 <code>[33%]</code></a></li>
+</ul>
+</li>
+<li><a href="#org54eb32d">9. 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-05 三&gt;</span></span></a>
+<ul>
+<li><a href="#org548d703">9.1. <span class="done DONE">DONE</span> 风险管理数据类系统2017年度项目(细化-001) 技术方案 <code>[100%]</code></a></li>
+<li><a href="#orgeadb459">9.2. <span class="done DONE">DONE</span> 2016年一体化系统优化完善及配套改造项目(细化-005)[FR-201706-19378]技术方案 <code>[1/1]</code></a></li>
+</ul>
+</li>
+<li><a href="#org36bcbe4">10. 工作内容 <code>[0/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-07 五&gt;</span></span></a>
+<ul>
+<li><a href="#org714bf90">10.1. <span class="todo TODO">TODO</span> 新加坡分行交易修改删除原因记录表</a></li>
+</ul>
+</li>
+<li><a href="#org83a2d1a">11. 工作内容 <code>[0/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-11 二&gt;</span></span></a>
+<ul>
+<li><a href="#org859e097">11.1. <span class="todo TODO">TODO</span> 外汇敞口需求-赵明理 <code>[0%]</code></a>
+<ul>
+<li><a href="#org4db46ba">11.1.1. <span class="todo TODO">TODO</span> 2016年优化</a></li>
+<li><a href="#orgcb34814">11.1.2. <span class="todo TODO">TODO</span> 2017年优化</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd0db9f6">12. 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-17 一&gt;</span></span></a>
+<ul>
+<li><a href="#org4f180c4">12.1. <span class="done DONE">DONE</span> 下午准生产环境同步</a></li>
+<li><a href="#org9ec6a99">12.2. <span class="done DONE">DONE</span> 志强冲销交易验证</a></li>
+</ul>
+</li>
+<li><a href="#org82fd400">13. 工作内容 <code>[1/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-18 二&gt;</span></span></a>
+<ul>
+<li><a href="#org8fa1359">13.1. <span class="done DONE">DONE</span> 对账20170630日数据-雪佳</a></li>
+</ul>
+</li>
+<li><a href="#org0805c84">14. 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-19 三&gt;</span></span></a>
+<ul>
+<li><a href="#orgc633a5d">14.1. <span class="done DONE">DONE</span> 对账新逻辑</a></li>
+<li><a href="#org70dc004">14.2. <span class="done DONE">DONE</span> 5405对账逻辑 <code>[100%]</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0d81ded" class="outline-2">
+<h2 id="org0d81ded"><span class="section-number-2">1</span> 工作内容 <code>[13/14]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-07 三&gt;</span></span></h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org85a01f6" class="outline-3">
+<h3 id="org85a01f6"><span class="section-number-3">1.1</span> <span class="done DONE">DONE</span> 工单编号：QA-CSD.CSP-17-06-0145</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>文元反馈</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0717672" class="outline-3">
+<h3 id="org0717672"><span class="section-number-3">1.2</span> <span class="done DONE">DONE</span> 请完成P704批次投产方案制订的准备工作</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>晓营反馈</li>
+<li>晓营已经填写完成</li>
+<li>钟海勇反馈完成</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf7a709" class="outline-3">
+<h3 id="orgdf7a709"><span class="section-number-3">1.3</span> <span class="done DONE">DONE</span> 外汇敞口基础表所需求字段表样-郭长青</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>梁森反馈</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga0a6085" class="outline-3">
+<h3 id="orga0a6085"><span class="section-number-3">1.4</span> <span class="done DONE">DONE</span> 下传RM头寸问题-李艳波 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> MUREX赵磊帮忙分析问题原因</li>
+<li class="on"><code>[X]</code> 赵磊反馈MUREX界面与TP_LL中的M_H_BUY方向一致</li>
+<li class="on"><code>[X]</code> 等待艳波与业务沟通,后续艳波处理</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1997cb0" class="outline-3">
+<h3 id="org1997cb0"><span class="section-number-3">1.5</span> <span class="done DONE">DONE</span> 张文通P703由D+1日调到D日打版本，分析一下对IMA的影响</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>钟海勇负责</li>
+<li>IMA按原计划D+1日，由于下的是全量数据</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb887bfb" class="outline-3">
+<h3 id="orgb887bfb"><span class="section-number-3">1.6</span> <span class="done DONE">DONE</span> 张震债券交易事件 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 根据天白逻辑出了一版数据</li>
+<li class="on"><code>[X]</code> 回馈交易事件监控表的展示字段,下周反馈</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf7af748" class="outline-3">
+<h3 id="orgf7af748"><span class="section-number-3">1.7</span> <span class="todo TODO">TODO</span> 志强对账总账与流水剩余核算码 <code>[5/7]</code></h3>
+<div class="outline-text-3" id="text-1-7">
+</div><div id="outline-container-org69cb7ce" class="outline-4">
+<h4 id="org69cb7ce"><span class="section-number-4">1.7.1</span> <span class="done DONE">DONE</span> 7344 <code>[100%]</code></h4>
+<div class="outline-text-4" id="text-1-7-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:由于是估值只取一天的数据即可，不要反冲账，取m_nb_reverse = 'N'</li>
+<li class="on"><code>[X]</code> 比对流水与交易明细:FX-CV:6104-0900流水中有外汇类账务，交易中无法定位哪些是外汇类出账</li>
+<li class="on"><code>[X]</code> 比对流水与交易明细:交易类重新修改逻辑M_PL_CGU2，只有两笔对不上</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd351d36" class="outline-4">
+<h4 id="orgd351d36"><span class="section-number-4">1.7.2</span> <span class="done DONE">DONE</span> 7444 <code>[100%]</code></h4>
+<div class="outline-text-4" id="text-1-7-2">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:比对成功</li>
+<li class="on"><code>[X]</code> 比对流水与交易:交易加两个会计简码'IRCFAA','IRCFAB'</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ced662" class="outline-4">
+<h4 id="org6ced662"><span class="section-number-4">1.7.3</span> <span class="todo TODO">TODO</span> 7477 <code>[100%]</code></h4>
+<div class="outline-text-4" id="text-1-7-3">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:比对成功</li>
+<li class="on"><code>[X]</code> 有一笔原始交易号为0的,无法核对</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">流水原始交易号</th>
+<th scope="col" class="org-right">交易原始交易号</th>
+<th scope="col" class="org-left">问题原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">89949678</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">已经死掉，买卖方向为B</td>
+</tr>
+
+<tr>
+<td class="org-right">82769286</td>
+<td class="org-right">82769286</td>
+<td class="org-left">交易方向流水与交易记录不一致</td>
+</tr>
+
+<tr>
+<td class="org-right">93422330</td>
+<td class="org-right">93422330</td>
+<td class="org-left">交易里记录的买卖方向为B</td>
+</tr>
+
+<tr>
+<td class="org-right">94113069</td>
+<td class="org-right">94113069</td>
+<td class="org-left">交易里记录的买卖方向为B</td>
+</tr>
+
+<tr>
+<td class="org-right">93422442</td>
+<td class="org-right">93422442</td>
+<td class="org-left">交易里记录的买卖方向为B</td>
+</tr>
+
+<tr>
+<td class="org-right">61147187</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">交易已经死掉</td>
+</tr>
+
+<tr>
+<td class="org-right">83252955</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">交易已经死掉</td>
+</tr>
+
+<tr>
+<td class="org-right">83899212</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">交易已经死掉</td>
+</tr>
+
+<tr>
+<td class="org-right">92244635</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">交易已经死掉</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgfda75bb" class="outline-4">
+<h4 id="orgfda75bb"><span class="section-number-4">1.7.4</span> <span class="done DONE">DONE</span> 8344 <code>[100%]</code></h4>
+<div class="outline-text-4" id="text-1-7-4">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:流水缺少20160528、20160529日数据</li>
+<li class="on"><code>[X]</code> 比对流水与总账:取20161231日数据可以比对成功，由于是估值只取一天的数据即可，不要反冲账，取m_nb_reverse = 'N'</li>
+<li class="on"><code>[X]</code> 比对流水与交易:只一笔对不上,加工逻辑FUN_ACC_CNY_RATE(a.M_REP_DATE, a.M_C_CUR_PL) * decode(A.M_TRN_GRP,'FUT',  A.M_PL_CGU2,a.M_PL_FMV2)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf84f383" class="outline-4">
+<h4 id="orgf84f383"><span class="section-number-4">1.7.5</span> <span class="done DONE">DONE</span> 8468 <code>[50%]</code></h4>
+<div class="outline-text-4" id="text-1-7-5">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:比对成功</li>
+<li class="off"><code>[&#xa0;]</code> 比对流水与交易:</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb794d97" class="outline-4">
+<h4 id="orgb794d97"><span class="section-number-4">1.7.6</span> <span class="todo TODO">TODO</span> 8477 <code>[100%]</code></h4>
+<div class="outline-text-4" id="text-1-7-6">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:流水2014-09-03与总账不一致,流水多了一笔：M_ORIG_NB=231350611</li>
+<li class="on"><code>[X]</code> 比对流水与交易:</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4f38b24" class="outline-4">
+<h4 id="org4f38b24"><span class="section-number-4">1.7.7</span> <span class="done DONE">DONE</span> 8576 <code>[100%]</code></h4>
+<div class="outline-text-4" id="text-1-7-7">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 比对流水与总账:比对成功</li>
+<li class="on"><code>[X]</code> 比对流水与交易: 差了4$,由于有流水里有交易号为0的交易，无法准确定位</li>
+<li class="on"><code>[X]</code> 交易添加一个会计简码IRCFAB,修改交易逻辑decode(A.M_H_BUY,'S',-1*A.M_TP_IPAY,A.M_TP_IPAY) as mx_balance，where条件去掉A.M_H_DATE &lt; A.M_TP_IPAYDTE添加and A.M_H_BUY = 'S'</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7cda3f1" class="outline-3">
+<h3 id="org7cda3f1"><span class="section-number-3">1.8</span> <span class="done DONE">DONE</span> 对帐相关问题及对帐自动化架构</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>跟贾开宇过外汇敞口对不上的内容</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4076c37" class="outline-3">
+<h3 id="org4076c37"><span class="section-number-3">1.9</span> <span class="done DONE">DONE</span> 积利金项目升级需求[FR-201704-18385]</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>待MUREX陈天白反馈</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7d573ce" class="outline-3">
+<h3 id="org7d573ce"><span class="section-number-3">1.10</span> <span class="done DONE">DONE</span> 影像内容管理系统基础版本升级及操作系统迁移项目[FR-201706-18963]</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li>陈爱华76890</li>
+<li>仅配合测试</li>
+<li>5人天</li>
+<li>费用10500</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbff3e8a" class="outline-3">
+<h3 id="orgbff3e8a"><span class="section-number-3">1.11</span> <span class="done DONE">DONE</span> 关于新加坡分行业务人员来北京介绍“期货业务综合需求”的通知</h3>
+<div class="outline-text-3" id="text-1-11">
+<ul class="org-ul">
+<li>业务讨论中</li>
+<li>张婷婷负责</li>
+<li>无进展</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga0d6ad9" class="outline-3">
+<h3 id="orga0d6ad9"><span class="section-number-3">1.12</span> <span class="done DONE">DONE</span> Quanto需求暂定排期X79</h3>
+<div class="outline-text-3" id="text-1-12">
+<ul class="org-ul">
+<li>业务确认中</li>
+<li>张婷婷负责</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3681e4b" class="outline-3">
+<h3 id="org3681e4b"><span class="section-number-3">1.13</span> <span class="done DONE">DONE</span> 债券历史交易清理</h3>
+<div class="outline-text-3" id="text-1-13">
+<ul class="org-ul">
+<li>推迟到下周</li>
+<li>还未有数据字典</li>
+<li>文元负责</li>
+<li>数据字典发过来了</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org413a510" class="outline-3">
+<h3 id="org413a510"><span class="section-number-3">1.14</span> <span class="done DONE">DONE</span> 生产索引表空间満了</h3>
+<div class="outline-text-3" id="text-1-14">
+<ul class="org-ul">
+<li>删除了TP_ALL_MO表的索引之后为86%</li>
+<li>分析一些大索引的原因</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd61d946" class="outline-2">
+<h2 id="orgd61d946"><span class="section-number-2">2</span> 工作内容 <code>[3/3]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-08 四&gt;</span></span></h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-org3bcff7b" class="outline-3">
+<h3 id="org3bcff7b"><span class="section-number-3">2.1</span> <span class="done DONE">DONE</span> 外包差异化管控－重点外包产品管控前移</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>E3,E4情况太高，给出说明原因</li>
+<li>钟海勇负责</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbf45bef" class="outline-3">
+<h3 id="orgbf45bef"><span class="section-number-3">2.2</span> <span class="done DONE">DONE</span> 查看生产上以前日期INI的JOBCTL原因</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>岳晓营</li>
+<li>钟海勇 生产漏打了一些JOBCTL</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgabf38c8" class="outline-3">
+<h3 id="orgabf38c8"><span class="section-number-3">2.3</span> <span class="done DONE">DONE</span> 查看生产报表服务器配置情况 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>崔恩铭</li>
+<li class="on"><code>[X]</code> CPU:64-16</li>
+<li class="on"><code>[X]</code> 内存:24G</li>
+<li class="on"><code>[X]</code> 磁盘空间:1T</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge24d76b" class="outline-2">
+<h2 id="orge24d76b"><span class="section-number-2">3</span> 工作内容 <code>[3/3]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-09 五&gt;</span></span></h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-org4ac69d1" class="outline-3">
+<h3 id="org4ac69d1"><span class="section-number-3">3.1</span> <span class="done DONE">DONE</span> 生产问题单TEMP不足SQL优化方案 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 回复袁哥，抄送崔恩铭</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org03fac0f" class="outline-3">
+<h3 id="org03fac0f"><span class="section-number-3">3.2</span> <span class="done DONE">DONE</span> 外包差异化管理-会议</h3>
+</div>
+<div id="outline-container-org2c95c72" class="outline-3">
+<h3 id="org2c95c72"><span class="section-number-3">3.3</span> <span class="done DONE">DONE</span> 新加坡业务需求CB3-周贤举 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> FXSPOT</li>
+<li class="on"><code>[X]</code> FROWARD</li>
+<li class="on"><code>[X]</code> CA20</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org57eaa66" class="outline-2">
+<h2 id="org57eaa66"><span class="section-number-2">4</span> 工作内容 <code>[1/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-13 二&gt;</span></span></h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-org92f708d" class="outline-3">
+<h3 id="org92f708d"><span class="section-number-3">4.1</span> <span class="done DONE">DONE</span> 生产环境数据清理 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 数据表空间清理:暂时清理备份表</li>
+<li class="on"><code>[X]</code> 后台数据文件清理</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb4b6eb4" class="outline-2">
+<h2 id="orgb4b6eb4"><span class="section-number-2">5</span> 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-15 四&gt;</span></span></h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-org277737d" class="outline-3">
+<h3 id="org277737d"><span class="section-number-3">5.1</span> <span class="done DONE">DONE</span> 澳门分行添加用户 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 周伟添加报表用户</li>
+<li class="on"><code>[X]</code> 文元添加配置表</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge78ee79" class="outline-3">
+<h3 id="orge78ee79"><span class="section-number-3">5.2</span> <span class="done DONE">DONE</span> 生产问题亚太 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> P_R_ERMS_TLISTING_FOREX_SWA_AP 主键冲突</li>
+</ul>
+
+<div class="figure">
+<p><img src="file:///home/aki/Share/yahe.png" alt="yahe.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0f53394" class="outline-2">
+<h2 id="org0f53394"><span class="section-number-2">6</span> 工作内容 <code>[0/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-26 一&gt;</span></span></h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-org088c489" class="outline-3">
+<h3 id="org088c489"><span class="section-number-3">6.1</span> <span class="todo TODO">TODO</span> 张震债券需求 <code>[66%]</code></h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 查看被修改交易表
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> refresh和cancel &amp; reissue</li>
+</ul></li>
+<li class="on"><code>[X]</code> 没有报价字段</li>
+<li class="on"><code>[X]</code> 234环境开发地址</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org270d05f" class="outline-3">
+<h3 id="org270d05f"><span class="section-number-3">6.2</span> <span class="todo TODO">TODO</span> T01_DL_INFO初始化逻辑</h3>
+</div>
+</div>
+<div id="outline-container-org3d3f802" class="outline-2">
+<h2 id="org3d3f802"><span class="section-number-2">7</span> 工作内容 <code>[1/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-06-27 二&gt;</span></span></h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-org4cee15f" class="outline-3">
+<h3 id="org4cee15f"><span class="section-number-3">7.1</span> <span class="done DONE">DONE</span> 生产后台乱码问题 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 崔恩铭查看的终端问题</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8b045d" class="outline-2">
+<h2 id="orga8b045d"><span class="section-number-2">8</span> 工作内容 <code>[0/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-04 二&gt;</span></span></h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-org2d389ec" class="outline-3">
+<h3 id="org2d389ec"><span class="section-number-3">8.1</span> <span class="todo TODO">TODO</span> ETL架构说明及开发规范 <code>[33%]</code></h3>
+<div class="outline-text-3" id="text-8-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> ETL工作说明</li>
+<li class="off"><code>[&#xa0;]</code> JOBCTL调度配置说明</li>
+<li class="off"><code>[&#xa0;]</code> 增量逻辑说明</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org54eb32d" class="outline-2">
+<h2 id="org54eb32d"><span class="section-number-2">9</span> 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-05 三&gt;</span></span></h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-org548d703" class="outline-3">
+<h3 id="org548d703"><span class="section-number-3">9.1</span> <span class="done DONE">DONE</span> 风险管理数据类系统2017年度项目(细化-001) 技术方案 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-9-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 财管资负技术方案</li>
+<li class="on"><code>[X]</code> 志强对账技术方案</li>
+<li class="on"><code>[X]</code> 一期版本升级技术方案</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeadb459" class="outline-3">
+<h3 id="orgeadb459"><span class="section-number-3">9.2</span> <span class="done DONE">DONE</span> 2016年一体化系统优化完善及配套改造项目(细化-005)[FR-201706-19378]技术方案 <code>[1/1]</code></h3>
+<div class="outline-text-3" id="text-9-2">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 新加坡分行技术方案</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org36bcbe4" class="outline-2">
+<h2 id="org36bcbe4"><span class="section-number-2">10</span> 工作内容 <code>[0/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-07 五&gt;</span></span></h2>
+<div class="outline-text-2" id="text-10">
+</div><div id="outline-container-org714bf90" class="outline-3">
+<h3 id="org714bf90"><span class="section-number-3">10.1</span> <span class="todo TODO">TODO</span> 新加坡分行交易修改删除原因记录表</h3>
+<div class="outline-text-3" id="text-10-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 现报表逻辑取M_V_DAT交易起日，新加坡需要修改为实际修改日期</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org83a2d1a" class="outline-2">
+<h2 id="org83a2d1a"><span class="section-number-2">11</span> 工作内容 <code>[0/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-11 二&gt;</span></span></h2>
+<div class="outline-text-2" id="text-11">
+</div><div id="outline-container-org859e097" class="outline-3">
+<h3 id="org859e097"><span class="section-number-3">11.1</span> <span class="todo TODO">TODO</span> 外汇敞口需求-赵明理 <code>[0%]</code></h3>
+<div class="outline-text-3" id="text-11-1">
+</div><div id="outline-container-org4db46ba" class="outline-4">
+<h4 id="org4db46ba"><span class="section-number-4">11.1.1</span> <span class="todo TODO">TODO</span> 2016年优化</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 修改即期资产和即期负债的逻辑</li>
+<li class="off"><code>[&#xa0;]</code> 查看黄金调整逻辑</li>
+<li class="on"><code>[X]</code> 精度问题，取大宽表逻辑数据现在为ROND2</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb34814" class="outline-4">
+<h4 id="orgcb34814"><span class="section-number-4">11.1.2</span> <span class="todo TODO">TODO</span> 2017年优化</h4>
+<div class="outline-text-4" id="text-11-1-2">
+</div><ol class="org-ol"><li><a id="orgc13a7b0"></a><span class="todo TODO">TODO</span> 银行监管累计外汇敞口比例计量<br /><div class="outline-text-5" id="text-11-1-2-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 可以加到G32里</li>
+<li class="off"><code>[&#xa0;]</code> 集团、法人、并表口径有累计外汇敞口比例</li>
+<li class="off"><code>[&#xa0;]</code> 总行及一级分行没有累计外汇敞口比例</li>
+<li class="off"><code>[&#xa0;]</code> 累计外汇敞口比例添加历史数据趋势图</li>
+</ul>
+</div></li>
+<li><a id="orgfee1f9a"></a><span class="todo TODO">TODO</span> 外汇敞口钻取分析功能<br /><div class="outline-text-5" id="text-11-1-2-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 交易组合和账户分类的粒度可以只展示MUREX数据转、总分行日常平仓交易、境内外币</li>
+</ul>
+</div></li>
+<li><a id="org87e8154"></a><span class="todo TODO">TODO</span> 主要参数校验功能<br /><div class="outline-text-5" id="text-11-1-2-3">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 参考大宽表各项指标</li>
+</ul>
+</div></li>
+<li><a id="org5962fcf"></a><span class="todo TODO">TODO</span> 实现海外利润账户明细提取功能<br /><div class="outline-text-5" id="text-11-1-2-4">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 只取MUREX系统的交易明细结果即可</li>
+</ul>
+</div></li>
+<li><a id="orgd448d0e"></a><span class="todo TODO">TODO</span> 交易账户汇率风险监测同业务部门的核对功能<br /><div class="outline-text-5" id="text-11-1-2-5">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> MUREX的PFOLIO与核算码对应关系</li>
+<li class="off"><code>[&#xa0;]</code> 交易账户的外汇敞口限额分别出PFOLIO和核算码级别的外汇敞口表</li>
+<li class="off"><code>[&#xa0;]</code> 对差异分析比对结果</li>
+</ul>
+</div></li></ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd0db9f6" class="outline-2">
+<h2 id="orgd0db9f6"><span class="section-number-2">12</span> 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-17 一&gt;</span></span></h2>
+<div class="outline-text-2" id="text-12">
+</div><div id="outline-container-org4f180c4" class="outline-3">
+<h3 id="org4f180c4"><span class="section-number-3">12.1</span> <span class="done DONE">DONE</span> 下午准生产环境同步</h3>
+</div>
+<div id="outline-container-org9ec6a99" class="outline-3">
+<h3 id="org9ec6a99"><span class="section-number-3">12.2</span> <span class="done DONE">DONE</span> 志强冲销交易验证</h3>
+<div class="outline-text-3" id="text-12-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 冲销的交易是否已死</li>
+<li class="off"><code>[&#xa0;]</code> 冲销交易的近端那笔是否不在进RM</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org82fd400" class="outline-2">
+<h2 id="org82fd400"><span class="section-number-2">13</span> 工作内容 <code>[1/1]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-18 二&gt;</span></span></h2>
+<div class="outline-text-2" id="text-13">
+</div><div id="outline-container-org8fa1359" class="outline-3">
+<h3 id="org8fa1359"><span class="section-number-3">13.1</span> <span class="done DONE">DONE</span> 对账20170630日数据-雪佳</h3>
+</div>
+</div>
+<div id="outline-container-org0805c84" class="outline-2">
+<h2 id="org0805c84"><span class="section-number-2">14</span> 工作内容 <code>[2/2]</code> <span class="timestamp-wrapper"><span class="timestamp">&lt;2017-07-19 三&gt;</span></span></h2>
+<div class="outline-text-2" id="text-14">
+</div><div id="outline-container-orgc633a5d" class="outline-3">
+<h3 id="orgc633a5d"><span class="section-number-3">14.1</span> <span class="done DONE">DONE</span> 对账新逻辑</h3>
+<div class="outline-text-3" id="text-14-1">
+<ul class="org-ul">
+<li>与志强和杨婷过MAPPING新逻辑</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org70dc004" class="outline-3">
+<h3 id="org70dc004"><span class="section-number-3">14.2</span> <span class="done DONE">DONE</span> 5405对账逻辑 <code>[100%]</code></h3>
+<div class="outline-text-3" id="text-14-2">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> 总账与流水核对</li>
+<li class="on"><code>[X]</code> 流水与交易核对
+<ul class="org-ul">
+<li>根据MAPPING表中的Dynamic acc Mapping中的5450找到3个会计简码（FXDCFAS、FXDCFBS、FXDCFSS）</li>
+<li>当交易为内部交易时取ACC_PRD2</li>
+<li>当交易为内部交易时取交易发起方为N的</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: aki</p>
+<p class="date">Created: 2017-07-20 四 18:28</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
